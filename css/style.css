@@ -180,3 +180,79 @@ body {
 .footer__btn:hover {
   background-color: #a57f4a;
 }
+/* Hero Section */
+.hero {
+    background: url('../images/hero-texture.jpg') center/cover no-repeat;
+    padding: 140px 20px;
+    text-align: center;
+    color: #3a2b2b;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85); /* легкий білий шар для читабельності */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #5a3c3c;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #8a2525; /* основний фірмовий бордовий */
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #5c1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Анімація входу */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1, .hero p, .btn {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
