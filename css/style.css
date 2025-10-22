@@ -1,48 +1,182 @@
-/* Основні стилі сайту */
+/* Скидання базових стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основні налаштування */
 body {
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    background-color: #ffffff;
-    color: #333;
+  font-family: 'Raleway', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Хедер */
 .header {
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.header .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 .logo img {
-    height: 50px;
+  height: 60px;
 }
 
+/* Меню */
 .nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-.nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s;
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-.nav ul li a:hover,
-.nav ul li a.active {
-    color: #b29357; /* Золотавий колір акценту */
+.nav a:hover,
+.nav .active a {
+  color: #c1975a; /* Золотистий колір */
+}
+
+/* Hero секція */
+.hero {
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  padding: 120px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background-color: #c1975a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #a57f4a;
+}
+
+/* Сервіси */
+.services {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.services_list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.services_item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.services_item:hover {
+  transform: translateY(-5px);
+}
+
+/* Портфоліо */
+.portfolio {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.portfolio_gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.portfolio_item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Контакти */
+.contact {
+  padding: 80px 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact_list {
+  list-style: none;
+}
+
+.contact_list li {
+  margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+.footer__btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #c1975a;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.footer__btn:hover {
+  background-color: #a57f4a;
 }
